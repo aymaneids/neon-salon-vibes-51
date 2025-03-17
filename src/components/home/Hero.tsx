@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Scissors, PaintBucket, Users, ExternalLink } from "lucide-react";
-
 const Hero = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -21,7 +20,6 @@ const Hero = () => {
       animatedElements.forEach(element => observer.unobserve(element));
     };
   }, []);
-
   return <section className="relative w-full h-screen overflow-hidden bg-salon-black">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-salon-black/50 to-salon-black z-10"></div>
       
@@ -60,17 +58,10 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             
             
-            <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-xl p-6 flex items-center border border-white border-opacity-20 transition-all hover:bg-opacity-20">
-              <Users className="text-salon-pink w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-white font-semibold text-lg">Elite Stylists</h3>
-                <p className="text-white/80 text-sm">Industry professionals</p>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
     </section>;
 };
-
 export default Hero;
