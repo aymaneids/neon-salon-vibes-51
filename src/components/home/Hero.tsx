@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Scissors, PaintBucket, Users, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -56,36 +56,6 @@ const Hero = () => {
       </div>
       
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-salon-black to-transparent h-32"></div>
-      
-      <div className="absolute bottom-10 left-0 right-0 z-30">
-        <div className="salon-container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-            <div className="glass-card p-6 flex items-center">
-              <Scissors className="text-salon-pink w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-white font-semibold text-lg">Precision Cuts</h3>
-                <p className="text-white/80 text-sm">Tailored to your style</p>
-              </div>
-            </div>
-            
-            <div className="glass-card p-6 flex items-center">
-              <PaintBucket className="text-salon-pink w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-white font-semibold text-lg">Expert Color</h3>
-                <p className="text-white/80 text-sm">Vibrant & lasting</p>
-              </div>
-            </div>
-            
-            <div className="glass-card p-6 flex items-center">
-              <Users className="text-salon-pink w-10 h-10 mr-4" />
-              <div>
-                <h3 className="text-white font-semibold text-lg">Elite Stylists</h3>
-                <p className="text-white/80 text-sm">Industry professionals</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>;
 };
 
