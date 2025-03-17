@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { Scissors, Paintbrush, Brush, Wind, Stars } from "lucide-react";
 
 const ServicesSection = () => {
