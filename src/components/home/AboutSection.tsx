@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
+import { Button } from "../ui/button";
 import { Scissors, Award, HeartHandshake } from "lucide-react";
 
 const AboutSection = () => {
@@ -89,9 +89,9 @@ const AboutSection = () => {
               <div className="animated-element delay-500 mt-8">
                 <Button 
                   onClick={() => navigate("/about")} 
-                  variant="primary"
-                  size="md"
-                  className="mt-4"
+                  variant="default"
+                  size="default"
+                  className="bg-salon-pink hover:bg-salon-pink/90 mt-4"
                 >
                   Learn More About Us
                 </Button>

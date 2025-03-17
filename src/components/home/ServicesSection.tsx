@@ -1,7 +1,7 @@
 
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
+import { Button } from "../ui/button";
 import { Scissors, Paintbrush, Brush, Wind, Stars } from "lucide-react";
 
 const ServicesSection = () => {
@@ -88,8 +88,9 @@ const ServicesSection = () => {
         <div className="text-center mt-12">
           <Button 
             onClick={() => navigate("/services")} 
-            variant="primary"
+            variant="default"
             size="lg"
+            className="bg-salon-pink hover:bg-salon-pink/90"
           >
             View All Services
           </Button>

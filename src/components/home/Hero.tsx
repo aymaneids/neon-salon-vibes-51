@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../ui/Button";
+import { Button } from "../ui/button";
 import { Scissors, PaintBucket, Users, ExternalLink } from "lucide-react";
+
 const Hero = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -20,6 +21,7 @@ const Hero = () => {
       animatedElements.forEach(element => observer.unobserve(element));
     };
   }, []);
+
   return <section className="relative w-full h-screen overflow-hidden bg-salon-black">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-salon-black/50 to-salon-black z-10"></div>
       
@@ -41,10 +43,10 @@ const Hero = () => {
           </p>
           
           <div className="animated-element flex flex-wrap justify-center gap-4 md:gap-6 delay-300">
-            <Button onClick={() => navigate("/contact")} variant="primary" size="lg" className="flex items-center gap-2">
+            <Button onClick={() => navigate("/contact")} variant="default" size="lg" className="bg-salon-pink hover:bg-salon-pink/90 flex items-center gap-2">
               Book Online <ExternalLink size={18} />
             </Button>
-            <Button onClick={() => navigate("/team")} variant="outlined" size="lg" className="text-white border-white hover:bg-white hover:text-salon-black">
+            <Button onClick={() => navigate("/team")} variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-salon-black">
               Meet Our Stylists
             </Button>
           </div>
@@ -70,4 +72,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
