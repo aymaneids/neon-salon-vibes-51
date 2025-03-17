@@ -1,12 +1,9 @@
-
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-
 const Hero = () => {
   const navigate = useNavigate();
-  
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -23,7 +20,6 @@ const Hero = () => {
       animatedElements.forEach(element => observer.unobserve(element));
     };
   }, []);
-  
   return <section className="relative w-full h-screen overflow-hidden bg-salon-black">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-salon-black/50 to-salon-black z-10"></div>
       
@@ -48,7 +44,7 @@ const Hero = () => {
             <Button onClick={() => navigate("/contact")} variant="default" size="lg" className="bg-salon-pink hover:bg-salon-pink/90 flex items-center gap-2">
               Book Online <ExternalLink size={18} />
             </Button>
-            <Button onClick={() => navigate("/team")} variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-salon-black">
+            <Button onClick={() => navigate("/team")} variant="outline" size="lg" className="border-white hover:bg-white text-slate-950">
               Meet Our Stylists
             </Button>
           </div>
@@ -58,5 +54,4 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-salon-black to-transparent h-32"></div>
     </section>;
 };
-
 export default Hero;
